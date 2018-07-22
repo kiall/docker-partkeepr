@@ -1,7 +1,7 @@
 FROM php:7-apache
 MAINTAINER Markus Hubig <mh@imko.de>
 
-ENV VERSION 1.3.0
+ENV VERSION 1.4.0
 
 # defaults, overwrite via cli to customize (not used for now)
 ENV PARTKEEPR_DATABASE_HOST database
@@ -19,7 +19,7 @@ RUN set -ex \
         libjpeg62-turbo-dev \
         libicu-dev \
         libxml2-dev \
-        libpng12-dev \
+        libpng-dev \
         libldap2-dev \
     --no-install-recommends && rm -r /var/lib/apt/lists/* \
     \
